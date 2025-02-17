@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "张文聪 / Wencong Zhang"
+title                    : "张文聪 | Wencong Zhang"
 title_separator          : "-"
 name                     : &name "-"
 description              : &description "personal description"
