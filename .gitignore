@@ -1,0 +1,36 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Sensitive files (secrets, keys, tokens, passwords)
+*.key
+*.pem
+*.p12
+*.pfx
+*.env
+.env.*
+secrets.*
+config.local.*
+*.secret
+credentials.*
+*_token
+*_password
+ghp_*
+gho_*
+ghu_*
+ghs_*
+ghr_*
