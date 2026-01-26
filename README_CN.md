@@ -4,7 +4,7 @@
 
 ## 🌐 网站地址
 
-访问网站：**https://Vincent0317.github.io/zhangwencong/**
+访问网站：**https://zhangwencong317.github.io**
 
 ## 🚀 功能特性
 
@@ -35,8 +35,8 @@ zhangwencong/
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/Vincent0317/zhangwencong.git
-cd zhangwencong
+git clone https://github.com/zhangwencong317/zhangwencong317.github.io.git
+cd zhangwencong317.github.io
 ```
 
 2. 启动本地服务器
