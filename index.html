@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,63 +10,106 @@
     <link rel="apple-touch-icon" href="assets/images/icon.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
     
-    <!-- Google Analytics (可选 - 需要替换为你的 Measurement ID) -->
-    <!-- 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-    -->
+    <style>
+        .bio-link {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .bio-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* 头像样式：由 CSS 完全接管，确保是 16px 圆角的方图 */
+        .header-avatar {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px; 
+            border: 4px solid #ffffff; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        .header-avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+        }
+    </style>
 </head>
 <body>
     <div class="main-container">
-        <!-- 顶部个人信息栏 -->
+        
         <div class="header-section">
-            <div class="header-content">
-                <div class="header-left">
-                    <span class="name">张文聪 「Wencong Zhang」</span>
-                    <span class="separator">|</span>
-                    <a href="documents/resume.pdf" class="header-link">CV</a>
-                    <span class="separator">|</span>
-                    <a href="mailto:vincentzz317@gmail.com" class="header-link">Email</a>
-                    <span class="separator">|</span>
-                    <a href="https://github.com/zhangwencong317" target="_blank" rel="noopener noreferrer" class="header-link">Github</a>
+            <div class="header-content" style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; justify-content: space-between; gap: 40px; margin-bottom: 40px;">
+                
+                <div class="header-intro" style="flex: 1; min-width: 0;">
+                    <div style="margin-bottom: 10px;">
+                        <span class="name" style="font-size: 2.2em; font-weight: bold;">Wencong Zhang (Vincent)</span>
+                    </div>
+                    
+                    <div class="header-links" style="margin-bottom: 15px; font-size: 1.1em;">
+                        <a href="documents/resume.pdf" class="header-link">CV</a>
+                        <span class="separator" style="margin: 0 8px; color: #ccc;">|</span>
+                        <a href="mailto:vincentzz317@gmail.com" class="header-link">Email</a>
+                        <span class="separator" style="margin: 0 8px; color: #ccc;">|</span>
+                        <a href="https://github.com/zhangwencong317" target="_blank" rel="noopener noreferrer" class="header-link">Github</a>
+                    </div>
+
+                    <div class="bio-section" style="margin-bottom: 0; line-height: 1.6;">
+                        <p>
+                            Hello! I am Wencong Zhang, you can also call me Vincent. I am an incoming Ph.D. student (Fall 2026) at the University of Hong Kong, working at the <a href="https://opendrivelab.com/" target="_blank" rel="noopener noreferrer" class="bio-link">OpenDriveLab</a>. I am highly fortunate to be supervised by <a href="https://lihongyang.info/" target="_blank" rel="noopener noreferrer" class="bio-link">Prof. Hongyang Li</a>, and co-advised by <a href="http://luoping.me/" target="_blank" rel="noopener noreferrer" class="bio-link">Prof. Ping Luo</a> and <a href="https://www.ai.hku.hk/people/academic-staff/mayi" target="_blank" rel="noopener noreferrer" class="bio-link">Prof. Yi Ma</a>.
+                        </p>
+                        <p style="margin-top: 10px;"><strong>Research Interest:</strong> Embodied AI, Humanoid Loco-Manipulation, End-to-End Vision-Language-Action Models, Machine Learning, Generalist Agents</p>
+                        <p style="margin-top: 10px;"><strong>Email</strong>: vincentzz317 [AT] gmail.com</p>
+                    </div>
                 </div>
-                <div class="header-right">
-                    <img src="https://placehold.co/150x200" alt="头像" class="header-avatar">
+
+                <div class="header-avatar-container" style="flex: 0 0 auto;">
+                    <img src="assets/images/me.jpg" alt="Wencong Zhang Avatar" class="header-avatar">
                 </div>
+                
             </div>
         </div>
 
-        <!-- 主要内容区域 -->
         <div class="content-section">
-            <!-- 个人简介 -->
-            <div class="bio-section">
-                <p>
-                    Hello, I'm 张文聪.
-                </p>
-            </div>
 
-            <!-- Research Interest -->
-            <div class="info-block">
-                <strong>Research Interest:</strong> Humanoid Loco-Manipulation, End to End Vision Language Action Model, Machine Learning
-            </div>
-
-            <!-- Email -->
-            <div class="info-block">
-                Email: vincentzz317 [AT] gmail.com
-            </div>
-
-
-            <!-- Publications Section -->
             <div class="section-title">Publications</div>
             
             <div class="publication-item">
                 <div class="pub-image">
-                    <img src="assets/images/Physiagent.png" alt="PhysiAgent Paper thumbnail" class="pub-thumbnail">
+                    <video class="pub-thumbnail" autoplay loop muted playsinline style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <source src="assets/videos/backpack_continuous_10_RISE_compressed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="pub-content">
+                    <div class="pub-title">
+                        <a href="https://arxiv.org/abs/2602.11075" target="_blank" rel="noopener noreferrer">RISE: Self-Improving Robot Policy with Compositional World Model</a>
+                    </div>
+                    <div class="pub-authors">
+                        Jiazhi Yang*†, Kunyang Lin*, Jinwei Li*, <strong>Wencong Zhang</strong>*, Tianwei Lin, Longyan Wu, Zhizhong Su, Hao Zhao, Ya-Qin Zhang, Li Chen, Ping Luo, Xiangyu Yue♮, Hongyang Li♮
+                    </div>
+                    <div class="pub-venue">In submission</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2602.11075" target="_blank" rel="noopener noreferrer" class="pub-link">arXiv</a>
+                    </div>
+                    <div class="pub-abstract">
+                        <em>This paper proposes a robotic reinforcement learning framework that leverages a Compositional World Model—factorizing simulation into a controllable multi-view dynamics model and a progress value model—to continuously generate imaginary rollouts and compute advantages for stable, closed-loop policy self-improvement without physical environment interactions.</em>
+                    </div>
+                    <div class="pub-bibtex">
+                        <pre>@article{yang2026rise,
+    title={RISE: Self-Improving Robot Policy with Compositional World Model},
+    author={Yang, Jiazhi and Lin, Kunyang and Li, Jinwei and Zhang, Wencong and Lin, Tianwei and Wu, Longyan and Su, Zhizhong and Zhao, Hao and Zhang, Ya-Qin and Chen, Li and Luo, Ping and Yue, Xiangyu and Li, Hongyang},
+    journal={arXiv preprint arXiv:2602.11075},
+    year={2026}
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="pub-image">
+                    <img src="assets/images/Physiagent.png" alt="PhysiAgent Paper thumbnail" class="pub-thumbnail" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
                 </div>
                 <div class="pub-content">
                     <div class="pub-title">
@@ -80,7 +123,7 @@
                         <a href="https://arxiv.org/abs/2509.24524" target="_blank" rel="noopener noreferrer" class="pub-link">arXiv</a>
                     </div>
                     <div class="pub-abstract">
-                        <em>Vision-Language-Action (VLA) models have achieved notable success but often struggle with limited generalizations. To address this, integrating generalized Vision-Language Models (VLMs) as assistants to VLAs has emerged as a popular solution. However, current approaches often combine these models in rigid, sequential structures: using VLMs primarily for high-level scene understanding and task planning, and VLAs merely as executors of lower-level actions, leading to ineffective collaboration and poor grounding challenges. In this paper, we propose an embodied agent framework, PhysiAgent, tailored to operate effectively in physical environments. By incorporating monitor, memory, self-reflection mechanisms, and lightweight off-the-shelf toolboxes, PhysiAgent offers an autonomous scaffolding framework to prompt VLMs to organize different components based on real-time proficiency feedback from VLAs to maximally exploit VLAs' capabilities. Experimental results demonstrate significant improvements in task-solving performance on complex real-world robotic tasks, showcasing effective self-regulation of VLMs, coherent tool collaboration, and adaptive evolution of the framework during execution. PhysiAgent makes practical and pioneering efforts to integrate VLMs and VLAs, effectively grounding embodied agent frameworks in real-world settings.</em>
+                        <em>This paper proposes an embodied agent framework named PhysiAgent that incorporates monitor, memory, self-reflection mechanisms, and lightweight toolboxes to prompt VLMs to autonomously organize different components based on real-time proficiency feedback, effectively addressing grounding challenges in rigid sequential VLA-VLM structures.</em>
                     </div>
                     <div class="pub-bibtex">
                         <pre>@article{wang2025physiagent,
@@ -92,6 +135,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 
