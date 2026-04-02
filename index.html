@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="科研个人网站">
+    <meta name="description" content="Wencong Zhang's Academic Portfolio">
     <title>Wencong Zhang | Vincent</title>
     <link rel="icon" type="image/jpeg" href="assets/images/icon.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="assets/images/icon.jpg">
@@ -11,12 +11,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
     
     <style>
+        /* 基础超链接美化 */
         .bio-link {
             color: #0366d6;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.2s ease;
         }
         .bio-link:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
         
@@ -27,12 +30,50 @@
             object-fit: cover;
             border-radius: 16px; 
             border: 4px solid #ffffff; 
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
             transition: transform 0.3s ease, box-shadow 0.3s ease; 
         }
         .header-avatar:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 简洁列表排版 (用于 Awards 和 Services) */
+        .clean-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .clean-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+            line-height: 1.5;
+            color: #333;
+        }
+        .list-title {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .list-date {
+            color: #666;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.95em;
+            white-space: nowrap;
+        }
+        /* Lead 专属质感小标签 */
+        .role-tag {
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #0366d6;
+            background-color: #f1f8ff;
+            border: 1px solid #c8e1ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -40,14 +81,14 @@
     <div class="main-container">
         
         <div class="header-section">
-            <div class="header-content" style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; justify-content: space-between; gap: 40px; margin-bottom: 40px;">
+            <div class="header-content" style="display: flex; flex-direction: row; flex-wrap: nowrap; align-items: flex-start; justify-content: space-between; gap: 40px; margin-bottom: 50px;">
                 
                 <div class="header-intro" style="flex: 1; min-width: 0;">
                     <div style="margin-bottom: 10px;">
-                        <span class="name" style="font-size: 2.2em; font-weight: bold;">Wencong Zhang (Vincent)</span>
+                        <span class="name" style="font-size: 2.2em; font-weight: 800; letter-spacing: -0.5px;">Wencong Zhang (Vincent)</span>
                     </div>
                     
-                    <div class="header-links" style="margin-bottom: 15px; font-size: 1.1em;">
+                    <div class="header-links" style="margin-bottom: 20px; font-size: 1.1em;">
                         <a href="documents/resume.pdf" class="header-link">CV</a>
                         <span class="separator" style="margin: 0 8px; color: #ccc;">|</span>
                         <a href="mailto:vincentzz317@gmail.com" class="header-link">Email</a>
@@ -55,12 +96,13 @@
                         <a href="https://github.com/zhangwencong317" target="_blank" rel="noopener noreferrer" class="header-link">Github</a>
                     </div>
 
-                    <div class="bio-section" style="margin-bottom: 0; line-height: 1.6;">
+                    <div class="bio-section" style="margin-bottom: 0; line-height: 1.65; color: #24292e;">
                         <p>
                             Hello! I am Wencong Zhang, you can also call me Vincent. I am an incoming Ph.D. student (Fall 2026) at the University of Hong Kong, working at the <a href="https://opendrivelab.com/" target="_blank" rel="noopener noreferrer" class="bio-link">OpenDriveLab</a>. I am highly fortunate to be supervised by <a href="https://lihongyang.info/" target="_blank" rel="noopener noreferrer" class="bio-link">Prof. Hongyang Li</a>, and co-advised by <a href="http://luoping.me/" target="_blank" rel="noopener noreferrer" class="bio-link">Prof. Ping Luo</a> and <a href="https://www.ai.hku.hk/people/academic-staff/mayi" target="_blank" rel="noopener noreferrer" class="bio-link">Prof. Yi Ma</a>.
                         </p>
-                        <p style="margin-top: 10px;"><strong>Research Interest:</strong> Embodied AI, Humanoid Loco-Manipulation, End-to-End Vision-Language-Action Models, Machine Learning, Generalist Agents</p>
-                        <p style="margin-top: 10px;"><strong>Email</strong>: vincentzz317 [AT] gmail.com</p>
+                        <p style="margin-top: 12px;"><strong>Research Interest:</strong> Embodied AI, Humanoid Loco-Manipulation, End-to-End Vision-Language-Action Models, Machine Learning, Generalist Agents</p>
+                        <p style="margin-top: 6px;"><strong>Interned:</strong> THU AIR, Kinetix AI</p>
+                        <p style="margin-top: 6px;"><strong>Email:</strong> vincentzz317 [AT] gmail.com</p>
                     </div>
                 </div>
 
@@ -73,11 +115,11 @@
 
         <div class="content-section">
 
-            <div class="section-title">Publications</div>
+            <div class="section-title" style="margin-bottom: 25px;">Publications</div>
             
             <div class="publication-item">
                 <div class="pub-image">
-                    <video class="pub-thumbnail" autoplay loop muted playsinline style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <video class="pub-thumbnail" autoplay loop muted playsinline style="width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                         <source src="assets/videos/backpack_continuous_10_RISE_compressed.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -89,7 +131,7 @@
                     <div class="pub-authors">
                         Jiazhi Yang*†, Kunyang Lin*, Jinwei Li*, <strong>Wencong Zhang</strong>*, Tianwei Lin, Longyan Wu, Zhizhong Su, Hao Zhao, Ya-Qin Zhang, Li Chen, Ping Luo, Xiangyu Yue♮, Hongyang Li♮
                     </div>
-                    <div class="pub-venue">In submission</div>
+                    <div class="pub-venue" style="font-weight: 500; color: #d73a49;">In submission</div>
                     <div class="pub-links">
                         <a href="https://arxiv.org/abs/2602.11075" target="_blank" rel="noopener noreferrer" class="pub-link">arXiv</a>
                     </div>
@@ -109,7 +151,7 @@
 
             <div class="publication-item">
                 <div class="pub-image">
-                    <img src="assets/images/Physiagent.png" alt="PhysiAgent Paper thumbnail" class="pub-thumbnail" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <img src="assets/images/Physiagent.png" alt="PhysiAgent Paper thumbnail" class="pub-thumbnail" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
                 </div>
                 <div class="pub-content">
                     <div class="pub-title">
@@ -118,7 +160,7 @@
                     <div class="pub-authors">
                         Zhihao Wang*, Jianxiong Li*, Jinliang Zheng*, <strong>Wencong Zhang</strong>, Dongxiu Liu, Yinan Zheng, Haoyi Niu, Junzhi Yu, Xianyuan Zhan
                     </div>
-                    <div class="pub-venue">New In ML @ ICML 2025 Workshop</div>
+                    <div class="pub-venue" style="font-weight: 500;">New In ML @ ICML 2025 Workshop</div>
                     <div class="pub-links">
                         <a href="https://arxiv.org/abs/2509.24524" target="_blank" rel="noopener noreferrer" class="pub-link">arXiv</a>
                     </div>
@@ -136,6 +178,30 @@
                 </div>
             </div>
             
+            <div class="section-title" style="margin-top: 50px; margin-bottom: 20px;">Honors & Awards</div>
+            <ul class="clean-list">
+                <li>
+                    <span class="list-title">First Prize in China Robot Competition and RoboCup China Open <span class="role-tag">Lead</span></span>
+                    <span class="list-date">2025</span>
+                </li>
+                <li>
+                    <span class="list-title">Third Prize in RMUL, RoboMaster University League (Shandong)</span>
+                    <span class="list-date">2025</span>
+                </li>
+                <li>
+                    <span class="list-title">Second Prize in China Robot Competition and RoboCup China Open</span>
+                    <span class="list-date">2024</span>
+                </li>
+            </ul>
+
+            <div class="section-title" style="margin-top: 50px; margin-bottom: 20px;">Academic Services</div>
+            <ul class="clean-list">
+                <li>
+                    <span class="list-title">Reviewer, CVPR Workshop on Embodied AI in Life</span>
+                    <span class="list-date">2026</span>
+                </li>
+            </ul>
+
         </div>
     </div>
 
